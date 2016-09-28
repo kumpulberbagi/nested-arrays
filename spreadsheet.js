@@ -6,5 +6,9 @@ var table = [["Number", "Name", "Position", "Points per Game"],
             [18,"Sally Talls","Power Forward",[18,29,26,31,19]],
             [22, "Mo DiBoux","Small Forward",[11,0,23,17,0]]]
 
-console.log(table[3][2]=="Shooting Guard"); //true
-console.log(JSON.stringify(table[1][3]) == JSON.stringify([14,32,7,0,23])); //true
+// console.log(table[3][2]=="Shooting Guard"); //true
+// console.log(JSON.stringify(table[1][3]) == JSON.stringify([14,32,7,0,23])); //true
+
+table.push([22, "Elkana DiBoux","Small Forward",[99,99,99,99,99]])
+
+console.log(table[6][1]);
