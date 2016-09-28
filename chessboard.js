@@ -39,5 +39,4 @@ createArray("")
 createArray("white2")
 createArray("white1")
 
-
 console.log(chess[7][0])
