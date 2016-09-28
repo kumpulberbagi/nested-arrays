@@ -1,5 +1,5 @@
 //write your code here
-var chessboard = [['benteng hitam', 'kuda hitam', 'gajah hitam', 'raja hitam',
+/*var chessboard = [['benteng hitam', 'kuda hitam', 'gajah hitam', 'raja hitam',
 				   'ratu hitam', 'gajah hitam', 'kuda hitam', 'benteng hitam'],
 				  ['pion hitam', 'pion hitam', 'pion hitam', 'pion hitam', 'pion hitam', 'pion hitam', 'pion hitam', 'pion hitam'],
 				  [0,0,0,0,0,0,0,0],
@@ -9,53 +9,50 @@ var chessboard = [['benteng hitam', 'kuda hitam', 'gajah hitam', 'raja hitam',
 				  ['pion putih', 'pion putih', 'pion putih', 'pion putih', 'pion putih', 'pion putih', 'pion putih', 'pion putih'],
 				  ['benteng putih', 'kuda putih', 'gajah putih', 'raja putih',
 				   'ratu putih', 'gajah putih', 'kuda putih', 'benteng putih']];
+*/
 
-//console.log(chessboard[7][7]);
-
-var chessboard2 = new Array(8);
+var chessboard2 = [];
 
 for(var i = 0; i < 8 ; i++){
-	chessboard2[i] = new Array(8);
-	for(var j = 0 ; j < 8 ; j++){
-		chessboard2[i][j] = 0;
-	}
-}
-
-for(var i = 0 ; i < chessboard2.length ; i++){
+	chessboard2[i] = [];
 	for(var j = 0 ; j < 8 ; j++){
 		if(i == 1){
-			chessboard2[i][j] = "Pion Hitam";
+			chessboard2[i].push("Pion Hitam");
 		}else if(i == 6){
-			chessboard2[i][j] = "Pion Putih";
+			chessboard2[i].push("Pion Putih");
 		}else if(i == 0){
+			chessboard2[i][j] = [];
 			if(j == 0 || j == 7){
-				chessboard2[i][j] = "Benteng Hitam";
+				chessboard2[i][j].push("Benteng Hitam");
 			}else if(j == 1 || j == 6){
-				chessboard2[i][j] = "Kuda Hitam";	
+				chessboard2[i][j].push("Kuda Hitam");	
 			}else if(j == 2 || j == 5){
-				chessboard2[i][j] = "Gajah Hitam";	
+				chessboard2[i][j].push("Gajah Hitam");	
 			}else if(j == 3){
-				chessboard2[i][j] = "Raja Hitam";
+				chessboard2[i][j].push("Raja Hitam");
 			}else{
-				chessboard2[i][j] = "Ratu Hitam";	
+				chessboard2[i][j].push("Ratu Hitam");	
 			}
 		}else if(i == 7){
+			chessboard2[i][j] = [];
 			if(j == 0 || j == 7){
-				chessboard2[i][j] = "Benteng Putih";
+				chessboard2[i][j].push("Benteng Putih");
 			}else if(j == 1 || j == 6){
-				chessboard2[i][j] = "Kuda Putih";	
+				chessboard2[i][j].push("Kuda Putih");	
 			}else if(j == 2 || j == 5){
-				chessboard2[i][j] = "Gajah Putih";	
+				chessboard2[i][j].push("Gajah Putih");	
 			}else if(j == 3){
-				chessboard2[i][j] = "Raja Putih";
+				chessboard2[i][j].push("Raja Putih");
 			}else{
-				chessboard2[i][j] = "Ratu Putih";	
+				chessboard2[i][j].push("Ratu Putih");	
 			}
+		}else{
+			chessboard2[i].push(0);
 		}
 	}
 }
 
-for(var i = 0 ; i < 8 ; i++){
-	console.log(chessboard2[i] + " ");
-	console.log("\n");
-}
+console.log(chessboard2);
+
+
+console.log(chessboard[2][0]);
