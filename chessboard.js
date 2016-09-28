@@ -9,7 +9,7 @@
 //   ["Benteng Putih", "Kuda Putih", "Menteri Putih", "Raja Putih", "Ratu Putih", "Menteri Putih", "Kuda Putih", "Benteng Putih"]
 // ]
 
-function pionPutih() {
+function pionHitam() {
   let tampung = [];
   for (var i = 0; i < 9; i++) {
     tampung.push("Pion Hitam");
@@ -20,7 +20,7 @@ function pionPutih() {
 function pionPutih() {
   let tampung = [];
   for (var i = 0; i < 9; i++) {
-    tampung.push("Pion Hitam");
+    tampung.push("Pion Putih");
   }
   return tampung;
 }
@@ -28,7 +28,7 @@ function pionPutih() {
 function medanPertempuran() {
   let tampung = [];
   for (var i = 0; i < 9; i++) {
-    tampung.push("");
+    tampung.push("hallo");
   }
   return tampung
 }
@@ -36,9 +36,10 @@ function medanPertempuran() {
 var cassBord = [];
 var hitamBelakang = ["Benteng Hitam", "Kuda Hitam", "Menteri Hitam", "Raja Hitam", "Ratu Hitam", "Menteri Hitam", "Kuda Hitam", "Benteng Hitam"];
 var puithBelakang = ["Benteng Putih", "Kuda Putih", "Menteri Putih", "Raja Putih", "Ratu Putih", "Menteri Putih", "Kuda Putih", "Benteng Putih"];
-var hitamDepan = pionPutih();
+var hitamDepan = pionHitam();
 var putihDepan = pionPutih();
 var kosong = medanPertempuran();
+
 
 console.log("Medan");
 console.log(kosong);
@@ -50,17 +51,17 @@ console.log("Pion Hitam");
 console.log(putihDepan);
 console.log("=====================");
 
-for (var j = 0; j < 9; j++) {
-  if (j == 0) {
+for (var j = 0; j < 8; j++) {
+  if (j === 0) {
     cassBord[j] = hitamBelakang;
-  } else if (j == 1) {
+  } else if (j === 1) {
     cassBord[j] = hitamDepan;
-  } else if (j == 6) {
+  } else if (j === 6) {
     cassBord[j] = putihDepan;
-  } else if (j == 7) {
+  } else if (j === 7) {
     cassBord[j] = puithBelakang;
   } else {
-    cassBord[j] == kosong;
+    cassBord[j] = kosong;
   }
 }
 
