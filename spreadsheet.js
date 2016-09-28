@@ -13,4 +13,3 @@ var table2 = [
 console.log(table2[3][2] == "Shooting Guard");
 console.log(table2[3][0]);
 console.log(JSON.stringify(table2[1][3]) == JSON.stringify([14,32,7,0,23]));
-
