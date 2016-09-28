@@ -1,5 +1,36 @@
 //write your code here
-let chessboard =[["benteng putih","kuda putih","peluncur putih","queen putih","raja putih","peluncur putih","kuda putih","benteng putih"],["pion putih","pion putih","pion putih","pion putih","pion putih","pion putih","pion putih","pion putih"],["kosong","kosong","kosong","kosong","kosong","kosong","kosong","kosong"],["kosong","kosong","kosong","kosong","kosong","kosong","kosong","kosong"],["kosong","kosong","kosong","kosong","kosong","kosong","kosong","kosong"],["kosong","kosong","kosong","kosong","kosong","kosong","kosong","kosong"],["pion hitam","pion hitam","pion hitam","pion hitam","pion hitam","pion hitam","pion hitam","pion hitam"],["benteng hitam","kuda hitam","peluncur hitam","queen hitam","raja hitam","peluncur hitam","kuda hitam","benteng hitam"]]
+//let chessboard =[["benteng putih","kuda putih","peluncur putih","queen putih","raja putih","peluncur putih","kuda putih","benteng putih"],["pion putih","pion putih","pion putih","pion putih","pion putih","pion putih","pion putih","pion putih"],["kosong","kosong","kosong","kosong","kosong","kosong","kosong","kosong"],["kosong","kosong","kosong","kosong","kosong","kosong","kosong","kosong"],["kosong","kosong","kosong","kosong","kosong","kosong","kosong","kosong"],["kosong","kosong","kosong","kosong","kosong","kosong","kosong","kosong"],["pion hitam","pion hitam","pion hitam","pion hitam","pion hitam","pion hitam","pion hitam","pion hitam"],["benteng hitam","kuda hitam","peluncur hitam","queen hitam","raja hitam","peluncur hitam","kuda hitam","benteng hitam"]]
+let bidakPutih = ["benteng putih","kuda putih","peluncur putih","queen putih","raja putih","peluncur putih","kuda putih","benteng putih"]
+let bidakHitam = ["benteng hitam","kuda hitam","peluncur hitam","queen hitam","raja hitam","peluncur hitam","kuda hitam","benteng hitam"]
+var array = []
+var board = function (){
+  for (var i = 0; i < 8; i++) {
+    array.push([])
+  }
+  return array
+}
+var mapping = function (){
+  var papan = board()
+  for (var i = 0; i < papan.length; i++) {
+    for (var j = 0; j < papan.length; j++) {
+      if (i === 0) {
+        papan[i][j] = bidakPutih[j]
+      }else if (i === 1) {
+        papan[i][j] = "pion putih"
+      }else if (i === 6){
+        papan[i][j] = "pion hitam"
+      }else if (i === 7) {
+        papan[i][j] = bidakHitam[j]
+      }else {
+        papan[i][j] = "kosong"
+      }
+    }
+  }
+  return papan
+}
+var chessboard = mapping ()
+//console.log(chessboard());
+// console.log(chessboard[2][0]);
 console.log("-------------test case---------");
 console.log(chessboard[0][0]=="benteng putih");
 console.log(chessboard[0][1]=="kuda putih");
