@@ -1,10 +1,19 @@
 //write your code here
 "use strict"
 
-var chessboard = [[,,,,,,,],[,,,,,,,],[,,,,,,,],[,,,,,,,],[,,,,,,,],[,,,,,,,],[,,,,,,,],[,,,,,,,]]
+var chessboard = []
 var black = ["bPawn","bRoof", "bKnight", "bSlide", "bQueen", "bKing", "bSlide", "bKnight", "bRoof"]
 var white = ["wPawn", "wRoof", "wKnight", "wSlide", "wQueen", "wKing", "wSlide", "wKnight", "wRoof"]
 var space = ["empty"]
+
+function printBoard(){
+  for (var i=0; i<8; i++){
+    chessboard.push([])
+    for (var j=0; j<8; j++){
+      chessboard[i].push([])
+    }
+  }
+}
 
 function summon(){
   for(var i=0; i<8; i++){
@@ -24,6 +33,7 @@ function printSpace(){
 }
 
 function startGame(){
+  printBoard()
   summon()
   printSpace()
 }
@@ -32,10 +42,10 @@ function startGame(){
 
 
 startGame()
-console.log(chessboard[0][4]);
-console.log(chessboard[1][4]);
-console.log(chessboard[2][0]);
-console.log(chessboard[5][7]);
-console.log(chessboard[6][5]);
-console.log(chessboard[7][3]);
+// console.log(chessboard[0][4]);
+// console.log(chessboard[1][4]);
+// console.log(chessboard[2][0]);
+// console.log(chessboard[5][7]);
+// console.log(chessboard[6][5]);
+// console.log(chessboard[7][3]);
 console.log(chessboard);
