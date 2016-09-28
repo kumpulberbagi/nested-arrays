@@ -9,8 +9,8 @@ var board = [["benteng hitam", "kuda hitam", "gajah hitam", "ratu hitam", "raja 
               ["benteng putih", "kuda putih", "gajah putih", "ratu putih", "raja putih", "gajah putih", "kuda putih", "benteng putih"]
             ]
 console.log(board[7][0])
-var satuduatiga = [];
 
+//var satuduatiga = [];
 // var fill = (arr) => {
 //   for (var i = 0; i<8; i++){
 //   arr.push(i)
